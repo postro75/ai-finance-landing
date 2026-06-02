@@ -1,8 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "version": 2,
-  "name": "ai-finance-landing",
-  "public": true,
   "cleanUrls": true,
   "trailingSlash": false,
   "headers": [

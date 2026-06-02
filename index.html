@@ -3,7 +3,92 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI & Finance — Propozycja wizualizacji Landing Page</title>
+
+<!-- ============================================ -->
+<!-- SEO                                          -->
+<!-- ============================================ -->
+<title>AI & Finance — Inteligentne doradztwo finansowe z AI</title>
+<meta name="description" content="Łączymy 20+ lat doświadczenia w finansach z modelami AI nowej generacji. Strategie inwestycyjne, które widzą więcej, reagują szybciej i pracują 24/7.">
+<meta name="keywords" content="AI finansowe, doradztwo inwestycyjne, portfel inwestycyjny, sztuczna inteligencja w finansach, optymalizacja portfela, zarządzanie ryzykiem">
+<meta name="author" content="AI & Finance">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0f1c">
+<link rel="canonical" href="https://ai-finance-landing-five.vercel.app/">
+
+<!-- ============================================ -->
+<!-- OpenGraph (Facebook, LinkedIn)                -->
+<!-- ============================================ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ai-finance-landing-five.vercel.app/">
+<meta property="og:title" content="AI & Finance — Inteligentne doradztwo finansowe z AI">
+<meta property="og:description" content="Strategie inwestycyjne wspierane AI. 20+ lat doświadczenia + modele ML nowej generacji. Sprawdź, co AI widzi w Twoim portfelu.">
+<meta property="og:image" content="https://ai-finance-landing-five.vercel.app/images/expert-houndstooth.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ekspert AI & Finance — doradztwo finansowe">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="AI & Finance">
+
+<!-- ============================================ -->
+<!-- Twitter Card                                 -->
+<!-- ============================================ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://ai-finance-landing-five.vercel.app/">
+<meta name="twitter:title" content="AI & Finance — Inteligentne doradztwo finansowe z AI">
+<meta name="twitter:description" content="Strategie inwestycyjne wspierane AI. 20+ lat doświadczenia + modele ML nowej generacji.">
+<meta name="twitter:image" content="https://ai-finance-landing-five.vercel.app/images/expert-houndstooth.jpg">
+<meta name="twitter:image:alt" content="Ekspert AI & Finance">
+
+<!-- ============================================ -->
+<!-- Favicon                                      -->
+<!-- ============================================ -->
+<link rel="icon" type="image/jpeg" href="images/expert-portrait-id.jpg">
+
+<!-- ============================================ -->
+<!-- JSON-LD: Schema.org                          -->
+<!-- ============================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialService",
+  "name": "AI & Finance",
+  "description": "Doradztwo finansowe wspierane sztuczną inteligencją. Strategie inwestycyjne, optymalizacja portfela, zarządzanie ryzykiem.",
+  "url": "https://ai-finance-landing-five.vercel.app/",
+  "logo": "https://ai-finance-landing-five.vercel.app/images/expert-portrait-id.jpg",
+  "image": "https://ai-finance-landing-five.vercel.app/images/expert-houndstooth.jpg",
+  "telephone": "+48-000-000-000",
+  "priceRange": "$$$",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Poland"
+  },
+  "serviceType": [
+    "Doradztwo inwestycyjne",
+    "Optymalizacja portfela",
+    "Zarządzanie ryzykiem",
+    "Predykcje rynkowe"
+  ],
+  "knowsAbout": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Portfolio Management",
+    "Quantitative Finance"
+  ]
+}
+</script>
+
+<!-- ============================================ -->
+<!-- Google Analytics 4                           -->
+<!-- Wstaw swój Measurement ID: G-XXXXXXXXXX      -->
+<!-- ============================================ -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PLACEHOLDER');
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -673,6 +758,110 @@ body {
   display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
 }
 
+/* Formularz kontaktowy */
+.contact-form {
+  max-width: 520px;
+  margin: 0 auto;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 32px;
+  text-align: left;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.form-group { margin-bottom: 14px; }
+.form-group label {
+  display: block;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.15);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+.form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 24px;
+  background: var(--primary);
+  color: #06121a;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: 'Outfit', sans-serif;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+.form-submit:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px -8px rgba(6, 182, 212, 0.5);
+}
+.form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+.form-note {
+  font-size: 12px;
+  color: var(--muted);
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.5;
+}
+.form-note a { color: var(--primary); text-decoration: none; }
+.form-success {
+  display: none;
+  padding: 16px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 10px;
+  color: var(--success);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 14px;
+}
+.form-success.show { display: block; }
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 24px 20px; }
+}
+
 /* ============================================
    FOOTER NOTE
    ============================================ */
@@ -1204,25 +1393,109 @@ body {
 </section>
 
 <!-- ============================================ -->
-<!-- 10 — CTA                                    -->
+<!-- 10 — CTA + KONTAKT                           -->
 <!-- ============================================ -->
 <section class="cta-section">
   <div style="max-width: 1280px; margin: 0 auto;">
-    <span class="section-num">10 / CTA</span>
+    <span class="section-num">10 / Kontakt</span>
     <h2>Zacznij od 30-minutowej<br>rozmowy. Bez zobowiązań.</h2>
     <p>
       Pokażę Ci dokładnie, co AI widzi w Twoim obecnym portfelu i gdzie leżą ukryte możliwości.
       Konkretne dane, zero sprzedaży.
     </p>
-    <div class="btn-row">
-      <a href="#" class="btn btn-primary">
-        Zarezerwuj termin
+
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/PLACEHOLDER" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Imię *</label>
+          <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required placeholder="jan@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefon (opcjonalnie)</label>
+        <input type="tel" id="phone" name="phone" placeholder="+48 600 000 000">
+      </div>
+      <div class="form-group">
+        <label for="topic">Co Cię interesuje?</label>
+        <select id="topic" name="topic">
+          <option value="consultation">Konsultacja 30 min</option>
+          <option value="audit">Audyt obecnego portfela</option>
+          <option value="strategy">Indywidualna strategia AI</option>
+          <option value="other">Inne pytanie</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Wiadomość</label>
+        <textarea id="message" name="message" rows="4" placeholder="Krótko opisz swoją sytuację lub pytanie..."></textarea>
+      </div>
+      <button type="submit" class="form-submit">
+        Wyślij wiadomość
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-      </a>
-      <a href="#" class="btn btn-ghost">Pobierz whitepaper (PDF)</a>
-    </div>
+      </button>
+      <div class="form-success" id="formSuccess">
+        ✓ Dziękuję! Wiadomość wysłana. Odpowiadam w ciągu 24h.
+      </div>
+      <p class="form-note">
+        Wysyłając formularz, akceptujesz politykę prywatności.<br>
+        Lub napisz bezpośrednio: <a href="mailto:kontakt@ai-finance.pl">kontakt@ai-finance.pl</a>
+      </p>
+    </form>
   </div>
 </section>
+
+<script>
+  // Obsługa formularza (Formspree lub fallback)
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const submit = form.querySelector('.form-submit');
+    const success = document.getElementById('formSuccess');
+    const action = form.action;
+
+    submit.disabled = true;
+    submit.innerHTML = 'Wysyłanie...';
+
+    try {
+      // Jeśli Formspree endpoint jest ustawiony
+      if (!action.includes('PLACEHOLDER')) {
+        const data = new FormData(form);
+        const response = await fetch(action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+        if (response.ok) {
+          success.classList.add('show');
+          form.reset();
+          submit.innerHTML = '✓ Wysłane';
+          return;
+        }
+      }
+
+      // Fallback: mailto z danymi
+      const name = form.name.value;
+      const email = form.email.value;
+      const phone = form.phone.value;
+      const topic = form.topic.value;
+      const message = form.message.value;
+      const subject = encodeURIComponent('Kontakt ze strony AI&Finance: ' + topic);
+      const body = encodeURIComponent(
+        `Imię: ${name}\nEmail: ${email}\nTelefon: ${phone}\nTemat: ${topic}\n\nWiadomość:\n${message}`
+      );
+      window.location.href = `mailto:kontakt@ai-finance.pl?subject=${subject}&body=${body}`;
+      success.classList.add('show');
+      submit.innerHTML = '✓ Otwieram klienta poczty...';
+    } catch (err) {
+      submit.disabled = false;
+      submit.innerHTML = 'Spróbuj ponownie';
+      alert('Błąd wysyłania. Napisz bezpośrednio: kontakt@ai-finance.pl');
+    }
+  });
+</script>
 
 <!-- ============================================ -->
 <!-- FOOTER NOTE                                 -->

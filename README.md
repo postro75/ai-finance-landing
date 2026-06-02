@@ -1,45 +1,56 @@
-# AI & Finance — Landing Page
+# AI & Finance — Landing Page (Production)
 
-Statyczna strona HTML, zdeployowana na Vercel.
+🌐 **Live:** https://ai-finance-landing-five.vercel.app
+
+Statyczna strona HTML, automatyczny deploy z GitHuba przez Vercel.
 
 ## Struktura
 ```
 .
-├── index.html          # Główna strona
-├── images/             # Zdjęcia eksperta
-│   ├── expert-houndstooth.jpg   # Hero
-│   ├── expert-shirt.jpg         # Sekcja "O ekspercie"
-│   ├── expert-fullbody-gray.jpg # Blog / press
-│   └── expert-portrait-id.jpg   # Avatar / favicon
-├── vercel.json         # Konfiguracja Vercel (cache, headers)
-└── package.json        # npm scripts
+├── index.html              # Główna strona (10 sekcji)
+├── robots.txt              # SEO
+├── sitemap.xml             # SEO
+├── vercel.json             # Cache + security headers
+├── package.json            # npm scripts
+└── images/                 # Zdjęcia eksperta
+    ├── expert-houndstooth.jpg   # Hero + OG image
+    ├── expert-shirt.jpg         # Sekcja "O ekspercie"
+    ├── expert-fullbody-gray.jpg # Rezerwa
+    └── expert-portrait-id.jpg   # Favicon + logo
 ```
 
-## Lokalne uruchomienie
+## Workflow
+
+### Edycja treści
 ```bash
-npm run dev
-# lub
+# Edytuj index.html
+git add -A
+git commit -m "Zmiana treści"
+git push origin master
+# Vercel auto-deploy w 30 sek
+```
+
+### Lokalne testowanie
+```bash
 npx serve . -l 3000
+# lub
+python -m http.server 3000
 ```
 
-## Deploy na Vercel
+## Co trzeba uzupełnić (placeholders)
 
-### Pierwszy deploy
-```bash
-vercel              # preview
-vercel --prod       # produkcja
-```
+1. **Google Analytics 4** — `index.html`, szukaj `G-PLACEHOLDER`, wstaw swój Measurement ID
+2. **Google Search Console** — zweryfikuj domenę w Search Console, dodaj meta tag
+3. **Formularz kontaktowy** — zarejestruj się na https://formspree.io (free plan, 50/mies), wstaw endpoint ID w `index.html` (`action="https://formspree.io/f/TWOJE-ID"`)
+4. **Email kontaktowy** — zamień `kontakt@ai-finance.pl` na prawdziwy adres (× 3 miejsca)
+5. **Telefon** — w Schema.org JSON-LD
+6. **Custom domain** (opcjonalnie) — Vercel dashboard → Settings → Domains
 
-### Szybki deploy przez GitHub
-1. Wgraj repo na GitHub
-2. Import w Vercel dashboard → vercel.com/new
-3. Framework Preset: **Other**
-4. Build Command: *(puste)*
-5. Output Directory: `.`
-6. Deploy
+## Auto-deploy
+- GitHub: https://github.com/postro75/ai-finance-landing
+- Branch: `master`
+- Każdy push = nowy deploy na production
+- Preview URL przy PR
 
-## Custom domain
-W Vercel dashboard → Settings → Domains → dodaj `ai-finance.pl`
-
-## Planowane (opcja 2): migracja do Next.js + Sanity
-Patrz: `../nextjs-sanity-setup/` (w przygotowaniu)
+## Planowane (opcja B): Next.js + Sanity
+Migracja do CMS, edycja treści przez panel. Ścieżka: `../ai-finance-next/`
