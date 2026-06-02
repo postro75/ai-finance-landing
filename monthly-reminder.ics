@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AI&Finance//Monthly Check//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ai-finance-monthly-2026@local
+DTSTAMP:20260602T140000Z
+DTSTART;VALUE=DATE:20260702
+DTEND;VALUE=DATE:20260703
+RRULE:FREQ=MONTHLY;BYMONTHDAY=2
+SUMMARY:AI & Finance — Monthly site check
+DESCRIPTION:Sprawdź stronę:\n\n• Otwórz https://ai-finance-landing-five.vercel.app - czy wszystko działa?\n• Test formularz kontaktowy - wyślij test\n• Sprawdź Vercel logs - jakiekolwiek błędy?\n• Przejrzyj Google Analytics (jeśli masz) - ruch\n• Sprawdź czy obrazy się ładują\n• Sprawdź czy linki działają\n• Przeczytaj feedback od gości (jeśli są)\n\nCzas: ~15 min\nPriorytet: niski (chyba że coś nie działa)
+LOCATION:https://ai-finance-landing-five.vercel.app
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+BEGIN:VALARM
+TRIGGER:-P0DT9H0M0S
+ACTION:DISPLAY
+DESCRIPTION:AI & Finance monthly check - 15 min
+END:VALARM
+END:VEVENT
+END:VCALENDAR
